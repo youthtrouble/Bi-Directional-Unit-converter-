@@ -5,8 +5,8 @@ import "math"
 
 type Converter struct{
 	Feet float64
-	Minute int
-	Seconds int
+	Minute float64
+	Seconds float64
 	Celsius float64
 	Fahrenheit float64
 	Degrees float64
@@ -25,11 +25,11 @@ func (cvr Converter) feettocent() float64{
 	return cvr.Feet *30.48
 }
 
-func (cvr Converter) mintosec() int{
+func (cvr Converter) mintosec() float64{
 	return cvr.Minute *60
 }
 
-func (cvr Converter) sectomin() int{
+func (cvr Converter) sectomin() float64{
 	return cvr.Seconds /60
 }
 
