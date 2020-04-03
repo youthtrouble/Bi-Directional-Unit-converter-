@@ -11,11 +11,11 @@ type Centimeter float64
 
 
 func (cvr Converter) centtofeet(x Centimeter) Feet{
-	return Feet(x/30.48)
+	return Feet(float64(x)/30.48)
 }
 
 func (cvr Converter) feettocent(x Feet) Centimeter{
-	return Centimeter (x*30.48)
+	return Centimeter (float64(x)*30.48)
 }
 
 type Minute float64
@@ -23,11 +23,11 @@ type Minute float64
 type Seconds float64
 
 func (cvr Converter) mintosec(y Minute) Seconds{
-	return Seconds (y*60.0)
+	return Seconds (float64(y)*60.0)
 }
 
 func (cvr Converter) sectomin(y Seconds) Minute{
-	return Minute (y/60.0)
+	return Minute (float64(y)/60.0)
 }
 
 type Celsius float64
@@ -35,11 +35,11 @@ type Celsius float64
 type Fahrenheit float64
 
 func (cvr Converter) celtofah(a Celsius) Fahrenheit{
-	return Fahrenheit (a*1.8 + 32)
+	return Fahrenheit (float64(a)*1.8 + 32)
 }
 
 func (cvr Converter) Fahtocel(a Fahrenheit) Celsius{
-	return Celsius ((a - 32) * 0.556) 
+	return Celsius ((float64(a) - 32) * 0.556) 
 }
 
 type Degrees float64
@@ -48,11 +48,11 @@ type Radians float64
 
 
 func (cvr Converter) degtorad(z Degrees) Radians{
-	return Radians (z* math.Pi/180)
+	return Radians (float64(z)* math.Pi/180)
 }
 
 func (cvr Converter) radtodeg(z Radians) Degrees{
-	return Degrees (z* 180/math.Pi)
+	return Degrees (float64(z)* 180/math.Pi)
 }
 
 type Kilograms float64
@@ -60,11 +60,11 @@ type Kilograms float64
 type Pounds float64
 
 func (cvr Converter) kgtopounds(c Kilograms) Pounds{
-	return Pounds (c*2.20462)
+	return Pounds (float64(c)*2.20462)
 }
 
 func (cvr Converter) poundstokg(c Pounds) Kilograms{
-	return Kilograms (c/2.20462)
+	return Kilograms (float64(c)/2.20462)
 }
 
 func main() {
